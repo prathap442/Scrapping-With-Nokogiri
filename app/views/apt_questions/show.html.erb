@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @apt_question.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @apt_question.answer %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @apt_question.category %>
+</p>
+
+<p>
+  <strong>Difficuly:</strong>
+  <%= @apt_question.difficuly %>
+</p>
+
+<p>
+  <strong>Question type:</strong>
+  <%= @apt_question.question_type %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @apt_question.is_public %>
+</p>
+
+<p>
+  <strong>Options:</strong>
+  <%= @apt_question.options %>
+</p>
+
+<%= link_to 'Edit', edit_apt_question_path(@apt_question) %> |
+<%= link_to 'Back', apt_questions_path %>

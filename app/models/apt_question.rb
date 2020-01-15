@@ -1,0 +1,2 @@
+class AptQuestion < ApplicationRecord
+end

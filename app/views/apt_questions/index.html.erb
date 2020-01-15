@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apt Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Category</th>
+      <th>Difficuly</th>
+      <th>Question type</th>
+      <th>Is public</th>
+      <th>Options</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apt_questions.each do |apt_question| %>
+      <tr>
+        <td><%= apt_question.question %></td>
+        <td><%= apt_question.answer %></td>
+        <td><%= apt_question.category %></td>
+        <td><%= apt_question.difficuly %></td>
+        <td><%= apt_question.question_type %></td>
+        <td><%= apt_question.is_public %></td>
+        <td><%= apt_question.options %></td>
+        <td><%= link_to 'Show', apt_question %></td>
+        <td><%= link_to 'Edit', edit_apt_question_path(apt_question) %></td>
+        <td><%= link_to 'Destroy', apt_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apt Question', new_apt_question_path %>
