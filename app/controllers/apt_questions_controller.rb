@@ -5,6 +5,10 @@ class AptQuestionsController < ApplicationController
   # GET /apt_questions.json
   def index
     @apt_questions = AptQuestion.all
+    respond_to do |format|
+      format.csv { send_data AptQuestion.export_csv(@apt_questions) }
+      format.html
+    end
   end
 
   # GET /apt_questions/1
